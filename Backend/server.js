@@ -13,6 +13,7 @@ const app = exp();
 app.use(cors({
   origin: [
     'https://user-management-mocha.vercel.app',
+    'https://user-mangement-iota.vercel.app', // Add your current Vercel URL here
     'http://localhost:5173'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
