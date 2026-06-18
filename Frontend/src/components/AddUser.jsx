@@ -20,7 +20,7 @@ function AddUser() {
     setLoading(true);
     // make HTTP POST req to create new user
     try {
-      let res = await fetch("VITE_URL/user-api/users", {
+      let res = await fetch(`${import.meta.env.VITE_API_URL}/user-api/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -8,7 +8,7 @@ function UsersList() {
   useEffect(() => {
     async function getUsers() {
       try {
-        let res = await fetch("VITE_URL/user-api/users", {
+        let res = await fetch(`${import.meta.env.VITE_API_URL}/user-api/users`, {
           method: "GET",
         });
 
@@ -18,6 +18,7 @@ function UsersList() {
           //update the state
           setUsers(resObj.payload);
         } else {
+          throw new Error("error occurred");
         }
       } catch (err) {
         //set error
